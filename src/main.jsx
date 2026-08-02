@@ -20,7 +20,7 @@ import Smaterial from "./bscreens/student/Smaterial.jsx";
 import Sprofile from "./bscreens/student/Sprofile.jsx";
 import Sresult from "./bscreens/student/Sresult.jsx";
 
-import Mdash from "./bscreens/mgt/mdash.jsx";
+import Mdash from "./bscreens/mgt/Mdash.jsx";
 import Mmain from "./bscreens/mgt/Mmain.jsx";
 
 import Sdash from "./bscreens/student/Sdash.jsx";
