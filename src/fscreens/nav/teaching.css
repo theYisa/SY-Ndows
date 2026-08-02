@@ -1,0 +1,169 @@
+/* --- Global Variables & Reset --- */
+:root {
+  --fs-title: clamp(2.5rem, 5vw, 4rem);
+  --fs-body: clamp(1rem, 1.3vw, 1.25rem);
+}
+
+.teaching-page { 
+  background: #fff; 
+  overflow-x: hidden;
+}
+
+/* --- 1. TEACHING HERO (Deep Teal Theme) --- */
+.teaching-hero {
+  background: linear-gradient(135deg, var(--dark-teal) 0%, var(--army-green) 100%);
+  padding: 15% 8% 7%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.kicker-wrap { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
+.line-gold { width: 40px; height: 2px; background: var(--gold-main); }
+h1 { font-size: 3.3rem; text-align: center;}
+.gold-text { color: var(--gold-main); }
+.hero-sub { font-size: 1rem; text-align: center; color: #a1a1aa; margin-top: 20px;}
+
+/* --- 2. SHINING STATS GRID --- */
+.shining-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+}
+
+.shine-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.shine-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--gold-main);
+}
+
+.shine-box::before {
+  content: '';
+  position: absolute;
+  top: -100%; left: -100%;
+  width: 50%; height: 300%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent);
+  transform: rotate(45deg);
+  animation: shine-sweep 5s infinite;
+}
+
+@keyframes shine-sweep {
+  0% { left: -100%; }
+  30% { left: 200%; }
+  100% { left: 200%; }
+}
+
+.shine-icon { font-size: 2.2rem; color: var(--gold-main); margin-bottom: 20px; }
+.shine-box strong { display: block; font-size: 2rem; font-weight: 800; margin-bottom: 5px; color: #fff; }
+.shine-box span { font-size: 0.95rem; font-weight: 500; color: #94a3b8; }
+
+/* --- 3. ACADEMIC FACTS (The 300 Section) --- */
+.fs-section { max-height: 80vh; display: flex; position: relative; }
+
+.academic-facts-complete {
+  background: #ffffff;
+  padding: 120px 8%;
+}
+
+.facts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.facts-title { font-size: 3.5rem; line-height: 1.1; color: #0f172a; font-weight: 900; }
+.green-highlight { color: var(--light-green); }
+.facts-divider { width: 100px; height: 6px; background: var(--gold-main); margin: 30px 0; }
+
+.check-list { display: flex; flex-direction: column; gap: 20px; }
+.check-item { display: flex; align-items: center; gap: 15px; font-weight: 700; color: #334155; font-size: 1.1rem; }
+.check-item svg { color: #10b981; font-size: 1.5rem; }
+
+.big-fact-text { font-size: 1.8rem; line-height: 1.5; color: #1e293b; margin-bottom: 30px; font-weight: 600; }
+.sub-fact-text { font-size: 1.1rem; line-height: 1.8; color: #64748b; }
+
+/* --- 4. NURSERY SECTION --- */
+.nursery-bg { background-color: #59ee3e22; }
+.fs-visual { flex: 1; }
+.main-f-img { width: 100%; height: 100%; object-fit: cover; }
+
+.fs-content-v4 { flex: 1; padding: 100px 8%; display: flex; flex-direction: column; justify-content: center; }
+.f-title { font-size: var(--fs-title); line-height: 1.1; color: #0f172a; margin-bottom: 25px; font-weight: 800; }
+.f-body { font-size: var(--fs-body); line-height: 1.8; color: #475569; margin-bottom: 40px; }
+
+.nursery-features { display: flex; gap: 15px; }
+.nursery-features span {
+  background: white; padding: 12px 25px; border-radius: 50px;
+  font-weight: 700; color: var(--army-green); box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Accents */
+.f-icon { font-size: 80px; margin-bottom: 30px; }
+.orange-glow { color: var(--light-green); filter: drop-shadow(0 0 10px rgba(157, 255, 0, 0.5)); }
+.blue-glow { color: var(--light-main); filter: drop-shadow(0 0 10px rgba(90, 179, 252, 0.5)); }
+
+/* --- 5. LABORATORIES (Teal Theme) --- */
+.fs-section.dark-teal-bg { max-height: 70vh; margin-top: 5%; display: grid; grid-template-columns: 1fr 1fr;}
+.dark-teal-bg { background-color: var(--dark-teal); }
+.white-text { color: #fff; }
+.white-p { color: #cbd5e1; }
+.fs-visual-split { max-height: 60vh; flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 40px; }
+.history-img-1 { width: 80%; border-radius: 15px; transform: translateY(-20px); }
+.history-img-2 { width: 80%; border-radius: 15px; transform: translateY(20px); }
+.history-img-3 { width: 100%; border-radius: 15px; transform: translateY(-20px); }
+.history-img-4 { width: 100%; border-radius: 15px; transform: translateY(20px); }
+/* --- 6. CAREER DISCOVERY CARDS --- */
+.career-discovery { padding: 100px 8%; background: var(--soft-grey); text-align: center; }
+.career-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 60px; }
+.career-card { height: 320px; perspective: 1000px; cursor: pointer; }
+.card-front, .card-back {
+  position: absolute; width: 100%; height: 100%; padding: 40px;
+  backface-visibility: hidden; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px; display: flex; flex-direction: column; justify-content: center;
+}
+.card-front { background: white; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.03); }
+.card-back { background: var(--dark-teal); color: white; transform: rotateY(180deg); text-align: left; }
+.career-card:hover .card-front { transform: rotateY(-180deg); }
+.career-card:hover .card-back { transform: rotateY(0deg); }
+.card-back ul { list-style: none; margin-top: 15px; }
+.card-back li { padding-left: 20px; position: relative; margin-bottom: 8px; font-weight: 600; }
+.card-back li::before { content: "→"; position: absolute; left: 0; color: var(--gold-main); }
+
+/* --- 7. LEADERSHIP SECTION --- */
+.staff-ext-v4 { padding: 120px 8%; background: white; }
+.p-grid-v6 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.p-card-large { display: flex; background: #f8fafc; border-radius: 20px; overflow: hidden; border: 1px solid #e2e8f0; }
+.p-img-box { flex: 1; height: 380px; }
+.p-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.p-details { flex: 1; padding: 45px; display: flex; flex-direction: column; justify-content: center; }
+.role-label { color: #2563eb; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-top: 10px; }
+
+/* --- 8. TEACHER WALL --- */
+.teachers-wall { margin-top: 100px; }
+.t-grid-massive { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; margin-top: 60px; }
+.t-card-mini { background: #fff; padding: 15px; border-radius: 15px; border: 1px solid #f1f5f9; transition: 0.3s; }
+.t-card-mini:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.t-card-mini img { width: 100%; height: 260px; border-radius: 10px; object-fit: cover; margin-bottom: 15px; }
+.t-info h5 { font-size: 1.1rem; color: #0f172a; margin-bottom: 5px; }
+.t-info p { color: #64748b; font-size: 0.9rem; font-weight: 600; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+  .shining-stats-grid, .p-grid-v6, .facts-wrapper { grid-template-columns: 1fr; }
+  .fs-section { flex-direction: column; }
+  .facts-title { font-size: 2.5rem; }
+  .big-fact-text { font-size: 1.4rem; }
+}
+

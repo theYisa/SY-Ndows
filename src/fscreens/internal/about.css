@@ -1,0 +1,377 @@
+/* ------------------ ABOUT PAGE BASE ------------------ */
+
+.about-page{
+  background-color: var(--dark-main);
+  padding-top:120px;
+}
+
+/* ------------------ HERO SECTION ------------------ */
+
+.about-hero{
+  background:#f5f7fa;
+  padding:110px 20px;
+  text-align:center;
+  margin-bottom: 90px;
+}
+
+.hero-content{
+  max-width:900px;
+  margin:auto;
+}
+
+.blue-text{
+  color:var(--dark-main);
+  font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:900;
+}
+
+.orange-text{
+  color:var(--orange-main);
+}
+
+.subtitle{
+  margin-top:20px;
+  font-size:18px;
+  color:#666;
+  line-height:1.6;
+}
+
+/* ------------------ LEGACY SECTION ------------------ */
+
+.legacy-section{
+  padding:100px 20px;
+  background:white;
+}
+
+.legacy-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  gap:70px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.legacy-text{
+  flex:1;
+  min-width:300px;
+}
+
+.legacy-text h2{
+  font-size:2.4rem;
+  margin-bottom:25px;
+  color:var(--dark-main);
+}
+
+.legacy-text p{
+  margin-bottom:18px;
+  line-height:1.7;
+  color:#555;
+}
+
+.stats-mini{
+  display:flex;
+  gap:40px;
+  margin-top:35px;
+}
+
+.stat-item h4{
+  font-size:2rem;
+  color:var(--dark-main);
+}
+
+.stat-item span{
+  color:#777;
+  font-size:14px;
+  font-weight:600;
+}
+
+.legacy-visual{
+  flex:1;
+  min-width:300px;
+  height:420px;
+  border-radius:20px;
+  background:#eee;
+  position:relative;
+}
+
+.abstract-shape{
+  position:absolute;
+  height:100%;
+  width:100%;
+  border:3px solid var(--orange-main);
+  border-radius:20px;
+  top:20px;
+  left:20px;
+  z-index:-1;
+}
+
+/* ------------------ MISSION VISION ------------------ */
+
+.mission-vision{
+  max-width:1200px;
+  margin:-60px auto 90px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
+  padding:0 20px;
+  position:relative;
+  z-index:2;
+}
+
+.about-card{
+  background:white;
+  padding:45px;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.05);
+  border-bottom:4px solid #eee;
+  transition:all 0.3s ease;
+}
+
+.about-card:hover{
+  transform:translateY(-10px);
+  border-bottom:4px solid var(--orange-main);
+}
+
+.about-card h3{
+  margin-bottom:12px;
+  color:var(--dark-main);
+}
+
+.about-card p{
+  color:#666;
+  line-height:1.6;
+}
+
+.icon-box-orange{
+  color:var(--orange-main);
+  margin-bottom:20px;
+}
+
+.icon-box-blue{
+  color:var(--light-main);
+  margin-bottom:20px;
+}
+
+/* ------------------ LEADERSHIP MESSAGE ------------------ */
+
+.leadership-message{
+  padding:110px 20px;
+  background:#ffffff;
+}
+
+.message-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  gap:80px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.message-image{
+  flex:1;
+  min-width:300px;
+  position:relative;
+}
+
+.message-image img{
+  width:100%;
+  border-radius:12px;
+  position:relative;
+  z-index:2;
+}
+
+.image-accent{
+  position:absolute;
+  top:-25px;
+  left:-25px;
+  width:120px;
+  height:120px;
+  background:var(--orange-main);
+  border-radius:10px;
+  z-index:1;
+}
+
+.message-text{
+  flex:1;
+  min-width:300px;
+}
+
+.small-label{
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+  color:var(--orange-main);
+}
+
+.message-text h2{
+  margin:12px 0 20px;
+  font-size:2rem;
+}
+
+.message-text p{
+  margin-bottom:18px;
+  color:#555;
+  line-height:1.7;
+}
+
+.blue-text-small{
+  color:var(--dark-main);
+}
+
+.signature{
+  margin-top:25px;
+  font-size:20px;
+  color:var(--dark-main);
+}
+
+.title-tag{
+  font-size:14px;
+  color:#777;
+}
+
+/* ------------------ PILLARS SECTION ------------------ */
+
+.pillars-section{
+  padding:110px 20px;
+  background:#f4f7f9;
+  text-align:center;
+}
+
+.pillars-header h2{
+  font-size:2.2rem;
+  color:var(--dark-main);
+}
+
+.orange-line-center{
+  height:4px;
+  width:60px;
+  background:var(--orange-main);
+  margin:15px auto 50px;
+}
+
+.pillars-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:40px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.pillar-item{
+  background:white;
+  padding:45px 25px;
+  border-radius:14px;
+  transition:all 0.3s ease;
+}
+
+.pillar-item:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.p-icon{
+  font-size:40px;
+  color:var(--dark-main);
+  margin-bottom:18px;
+}
+
+.pillar-item h4{
+  margin-bottom:10px;
+  color:var(--dark-main);
+}
+
+.pillar-item p{
+  color:#666;
+  line-height:1.6;
+}
+
+/* ------------------ CAMPUS LIFE GALLERY ------------------ */
+
+.about-gallery{
+  padding:90px 20px;
+}
+
+.gallery-main{
+  max-width:1200px;
+  margin:auto;
+  height:500px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+}
+
+.gallery-main img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery-overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:70px 40px;
+  color:white;
+  background:linear-gradient(transparent,rgba(5,40,69,0.9));
+}
+
+.gallery-overlay h3{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.gallery-overlay p{
+  max-width:600px;
+  line-height:1.6;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media (max-width:900px){
+
+  .legacy-container{
+    flex-direction:column;
+  }
+
+  .message-container{
+    flex-direction:column;
+    gap:50px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .about-hero{
+    padding:70px 20px;
+  }
+
+  .stats-mini{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .gallery-main{
+    height:350px;
+  }
+
+}
+
+@media (max-width:500px){
+
+  .mission-vision{
+    margin-top:-40px;
+  }
+
+  .about-card{
+    padding:35px;
+  }
+
+  .pillar-item{
+    padding:35px 20px;
+  }
+
+}

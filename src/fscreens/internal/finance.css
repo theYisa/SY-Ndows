@@ -1,0 +1,51 @@
+:root {
+  --ndows-blue: #3c25eb;
+  --soft-blue: #eff6ff;
+}
+
+.fin-container { padding: 50px 5%; background: #f8fafc; height: 100vh; }
+.blue-text { color: var(--ndows-blue); }
+.assured{
+  font-size: 14px;
+  padding: 20px;
+  padding-bottom: 40px;
+  font-style: italic;
+  color: black;
+}
+.fin-grid { display: flex; gap: 30px; }
+
+/* Desktop/Mobile Logic */
+@media (max-width: 1024px) { .fin-grid { flex-direction: column; } }
+
+/* Left Side */
+.fin-left-panel { flex: 1.5; }
+.fin-filter-box { background: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.filter-row { display: flex; gap: 15px; margin-top: 15px; }
+.filter-row select { flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; }
+
+.fee-list { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.fee-item {
+  display: flex; justify-content: space-between; padding: 20px; border: 1px solid #f1f5f9;
+  border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: 0.2s;
+}
+.fee-item:hover { border-color: var(--ndows-blue); background: var(--soft-blue); }
+.fee-item.selected { background: var(--ndows-blue); color: white; border-color: var(--ndows-blue); }
+.check-icon { margin-right: 10px; }
+
+/* Right Side */
+.fin-right-panel { flex: 1; }
+.summary-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: sticky; top: 120px; }
+.s-line { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 8px; color: #64748b; }
+.total-line { border-top: 2px solid #f1f5f9; margin-top: 15px; padding-top: 15px; display: flex; justify-content: space-between; font-weight: 800; font-size: 1.2rem; color: #1e293b; }
+
+.method-btns { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 20px 0; }
+.m-btn { padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px; background: white; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+.m-btn.active { border-color: var(--ndows-blue); background: var(--soft-blue); color: var(--ndows-blue); font-weight: 700; }
+
+.qr-section { text-align: center; background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+.qr-placeholder { background: white; padding: 10px; display: inline-block; margin-bottom: 10px; border-radius: 10px; }
+
+.pay-now-btn { width: 100%; padding: 20px; background: var(--ndows-blue); color: white; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; }
+.pay-now-btn:disabled { background: #cbd5e1; cursor: not-allowed; }
+
+.bank-details-card { margin-top: 20px; background: #1e293b; color: white; padding: 20px; border-radius: 15px; font-size: 0.85rem; }
