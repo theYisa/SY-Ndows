@@ -1,0 +1,49 @@
+:root{
+--bg-glow-a: rgba(0, 71, 171, 0.12);   /* Cobalt Blue Glow */
+  --dark-bg-a: #01040a;                  /* Almost black-blue */
+  --dark-glass-a: rgba(2, 6, 15, 0.9);
+  --dark-accent-a: #0047ab;              /* Cobalt Blue */
+  --dar-navbg-a: rgba(0, 71, 171, 0.06);
+
+  --light-glass-a: rgba(0, 71, 171, 0.05);
+  --light-border-a: rgba(0, 71, 171, 0.15);
+  --light-accent-a: #002e70;
+} 
+  
+.dash-full.a{ 
+  background: var(--dark-bg-a); 
+} 
+body.light .dash-full.a{ 
+  background: var(--light-bg-a); 
+}
+.glow.a{ 
+  background: radial-gradient(circle, var(--bg-glow-a) 0%, transparent 70%); 
+}
+.dash-bar.a { 
+  background: var(--dark-glass-a); 
+}
+body.light .dash-bar.a{ 
+  border-right: 1px solid var(--light-border-a); 
+}
+.brand-icon.a{
+  color: var(--dark-accent-a); 
+}
+.nav-item.a{
+  color: #92baa5;
+}
+.nav-item.a:active,
+.nav-item.a:hover {
+  background: var(--dar-navbg-a);
+  color: var(--dark-accent-a);
+  box-shadow: 0 10px 20px rgba(5, 40, 69, 0.2);
+  border-left: 4px solid var(--dark-accent-a);
+}
+body.light .nav-item.a:hover{ color: var(--light-accent-a); }
+.ahemeBtn.a { color: var(--dark-accent-a);
+}
+body.light .ahemeBtn.a{ color: var(--dark-bg-a); }
+
+
+
+
+

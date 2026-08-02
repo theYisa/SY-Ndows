@@ -1,0 +1,49 @@
+:root{
+  --bg-glow-t: rgba(143, 185, 18, 0.15);
+  --dark-bg-t:#061603;
+  --dark-glass-t:rgb(4, 17, 6);
+  --dark-accent-t: #00bf20;
+  --dar-navbg-t: rgba(116, 233, 14, 0.08);
+
+  --light-glass-t: rgba(175, 234, 148, 0.18);
+  --light-border-t: rgba(25, 42, 15, 0.08);
+  --light-accent-t: #025901;
+} 
+
+.dash-full.t{ 
+  background: var(--dark-bg-t); 
+} 
+body.light .dash-full.t{ 
+  background: var(--light-bg-t); 
+}
+.glow.t{ 
+  background: radial-gradient(circle, var(--bg-glow-t) 0%, transparent 70%); 
+}
+.dash-bar.t { 
+  background: var(--dark-glass-t); 
+}
+body.light .dash-bar.t{ 
+  border-right: 1px solid var(--light-border-t); 
+}
+.brand-icon.t{
+  color: var(--dark-accent-t); 
+}
+.nav-item.t{
+  color: #92baa5;
+}
+.nav-item.t:active,
+.nav-item.t:hover {
+  background: var(--dar-navbg-t);
+  color: var(--dark-accent-t);
+  box-shadow: 0 10px 20px rgba(5, 40, 69, 0.2);
+  border-left: 4px solid var(--dark-accent-t);
+}
+body.light .nav-item.t:hover{ color: var(--light-accent-t); }
+.themeBtn.t { color: var(--dark-accent-t);
+}
+body.light .themeBtn.t{ color: var(--dark-bg-t); }
+
+
+
+
+

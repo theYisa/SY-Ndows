@@ -1,0 +1,56 @@
+:root {
+  --bg-color: #f1f5f9;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #0f172a;
+  --border-clr: rgba(226, 232, 240, 0.9);
+}
+
+[data-theme='dark'], .dark-mode {
+  --bg-color: #020617;
+  --card-bg: rgba(15, 23, 42, 0.7);
+  --text-main: #f8fafc;
+  --border-clr: rgba(51, 65, 85, 0.5);
+}
+
+.payroll-page { padding: 40px; background: var(--bg-color); color: var(--text-main); min-height: 100vh; transition: 0.3s; }
+.payroll-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+
+.payroll-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; }
+.glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--border-clr); border-radius: 20px; padding: 25px; }
+
+/* Form Styles */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.input-group { display: flex; flex-direction: column; gap: 8px; }
+.input-group label { font-size: 0.85rem; font-weight: 600; color: var(--subtext); }
+.input-group input, .input-group select { 
+  padding: 12px; border-radius: 10px; border: 1px solid var(--border-clr); 
+  background: var(--bg-color); color: var(--text-main); outline: none;
+}
+
+/* Sanction Section */
+.sanction-section { 
+  margin-top: 20px; padding-top: 20px; border-top: 2px dashed var(--border-clr); 
+}
+.sanction-section h4 { margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+.neg-input { border-color: rgba(239, 68, 68, 0.3) !important; color: #ef4444 !important; }
+
+/* Sorting List */
+.sorting-header { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.btn-sort { background: transparent; border: 1px solid var(--border-clr); color: var(--text-main); padding: 5px 12px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; }
+
+.teacher-item { 
+  display: flex; justify-content: space-between; align-items: center; 
+  padding: 15px; border-radius: 12px; border: 1px solid var(--border-clr); margin-bottom: 10px;
+}
+.t-main strong { display: block; }
+.t-main small { color: var(--subtext); }
+
+.t-status { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.t-status.paid { background: #dcfce7; color: #15803d; }
+.t-status.unpaid { background: #f1f5f9; color: #64748b; }
+.t-status.issue { background: #fffbeb; color: #92400e; }
+
+/* Footer */
+.form-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+.total-calc strong { font-size: 1.8rem; display: block; color: #3b82f6; }
+.btn-save { background: #3b82f6; color: white; border: none; padding: 15px 30px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; gap: 10px; }

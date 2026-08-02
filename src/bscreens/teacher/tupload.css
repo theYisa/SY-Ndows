@@ -1,0 +1,87 @@
+.mat-container { padding: 30px; max-width: 1400px; margin: 0 auto; }
+
+.mat-glass-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 30px; flex-wrap: wrap; gap: 20px;
+}
+
+.mat-search-wrap {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--tp-glass); padding: 10px 20px;
+  border-radius: 15px; border: 1px solid var(--tp-border);
+}
+
+.mat-search-wrap input { background: transparent; border: none; outline: none; color: var(--tp-text); }
+
+.mat-layout { display: grid; grid-template-columns: 350px 1fr; gap: 30px; }
+
+/* Upload Card */
+.mat-upload-card {
+  background: var(--tp-glass); border: 1px solid var(--tp-border);
+  padding: 30px; border-radius: 25px; position: sticky; top: 20px;
+  height: fit-content; box-shadow: var(--tp-card-shadow); overflow: hidden;
+}
+
+.drop-zone {
+  border: 2px dashed var(--tp-border); border-radius: 15px;
+  padding: 40px 20px; text-align: center; margin: 20px 0;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+
+.upload-icon { font-size: 3rem; color: var(--tp-accent); opacity: 0.5; }
+
+.upload-meta { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+
+.mat-select {
+  padding: 12px; border-radius: 10px; border: 1px solid var(--tp-border);
+  background: rgba(255,255,255,0.3); font-weight: 600;
+}
+
+.upload-btn {
+  width: 100%; padding: 15px; border-radius: 12px; border: none;
+  background: var(--tp-accent); color: white; font-weight: 800;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+
+.upload-btn.loading { opacity: 0.7; cursor: wait; }
+
+/* Library List */
+.mat-library { background: var(--tp-glass); border-radius: 25px; padding: 30px; border: 1px solid var(--tp-border); }
+
+.file-list { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+
+.file-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 20px; background: rgba(255,255,255,0.4);
+  border-radius: 15px; border: 1px solid var(--tp-border);
+  transition: 0.2s;
+}
+
+.file-item:hover { background: white; transform: translateX(5px); }
+
+.file-info { display: flex; align-items: center; gap: 15px; }
+
+.file-icon {
+  width: 45px; height: 45px; background: var(--tp-accent);
+  color: white; border-radius: 10px; display: flex;
+  align-items: center; justify-content: center; font-size: 1.2rem;
+}
+
+.file-details { display: flex; flex-direction: column; }
+.file-name { font-weight: 700; color: var(--tp-text); }
+.file-meta { font-size: 0.8rem; color: var(--tp-text-sub); }
+
+.file-actions { display: flex; gap: 10px; }
+.file-actions button {
+  width: 35px; height: 35px; border-radius: 8px; border: none;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+
+.btn-down { background: rgba(14, 165, 233, 0.1); color: var(--tp-accent); }
+.btn-del { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mat-layout { grid-template-columns: 1fr; }
+  .mat-upload-card { position: static; }
+}

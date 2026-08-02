@@ -1,0 +1,142 @@
+.at-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.at-glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.at-header-left { display: flex; gap: 20px; align-items: center; }
+
+.at-back-btn {
+  background: var(--tp-glass);
+  border: 1px solid var(--tp-border);
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+/* Toggle Switcher for Class vs Subject */
+.at-mode-toggle {
+  background: var(--tp-border);
+  padding: 5px;
+  border-radius: 15px;
+  display: flex;
+}
+
+.at-mode-toggle button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  background: transparent;
+  color: var(--tp-text-sub);
+  transition: 0.3s;
+}
+
+.at-mode-toggle button.active {
+  background: var(--tp-glass);
+  color: var(--tp-accent);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* The Matrix Card */
+.at-matrix-card {
+  background: var(--tp-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--tp-border);
+  border-radius: 30px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--tp-card-shadow);
+}
+
+.at-table-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.at-save-btn {
+  background: var(--tp-accent);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+}
+
+/* Table Design */
+.at-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.at-table th {
+  text-align: left;
+  padding: 15px;
+  color: var(--tp-text-sub);
+  border-bottom: 2px solid var(--tp-border);
+}
+
+.at-table td {
+  padding: 20px 15px;
+  border-bottom: 1px solid var(--tp-border);
+}
+
+.center { text-align: center; }
+
+.st-name { font-weight: 700; font-size: 1.1rem; }
+
+/* The Attendance Tick/Cross Buttons */
+.at-check-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.at-check-btn.present {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.at-check-btn.absent {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.at-pill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.at-pill.active { background: #22c55e; color: white; }
+.at-pill.warning { background: #f59e0b; color: white; }

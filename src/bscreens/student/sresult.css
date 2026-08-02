@@ -1,0 +1,173 @@
+
+.r-full{
+    padding: 40px;
+}
+.r-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  color: var(--light-accent-st);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 5px 5px 10px rgba(255,255,255,0.5), 
+              5px 5px 20px rgba(0,0,0,0.05);
+}
+body.light .r-header {
+  border-top: 5px solid rgba(174, 177, 190, 0.158);
+}
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.filter-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--light-accent-st);
+}
+.archive-select {
+  padding: 10px 15px 10px 35px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 200, 255, 0.704);
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+  outline: none;
+}
+body.light .archive-select {
+  color: var(--light-accent-st);
+  background: white;
+  border: 1px solid rgba(222, 245, 248, 0.861);
+  box-shadow: inset 5px 5px 10px rgba(255,255,255,0.5), 
+              5px 5px 20px rgba(0,0,0,0.05);
+}
+.gpa-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 25px;
+  padding: 20px 40px;
+}
+body.light .gpa-card {
+  color: rgb(20, 20, 20);
+  border: 1px solid rgba(222, 245, 248, 0.861);
+  box-shadow: inset 5px 5px 10px rgba(255,255,255,0.5), 
+              5px 5px 20px rgba(0,0,0,0.05);
+}
+
+.gpa-info span { font-size: 0.9rem; opacity: 0.8; }
+.gpa-info h3 { font-size: 2.5rem; color: var(--light-accent-st); }
+.trend-icon { font-size: 3rem; opacity: 0.2; }
+
+.subjects-archive-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  align-items: start;
+  gap: 15px;
+}
+.subject-item {
+  padding: 0;
+  overflow: hidden;
+  /* transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.subject-summary {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+}
+body.light .subject-summary {
+  border: 1px solid rgba(128, 128, 128, 0.144);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 5px 5px 10px rgba(255,255,255,0.5), 
+              5px 5px 20px rgba(0,0,0,0.05);
+}
+
+.sub-main { display: flex; gap: 20px; align-items: center; }
+.sub-icon {
+  width: 50px;
+  height: 50px;
+  background: #f1f5f9a4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(13, 76, 132);
+  font-size: 1.4rem;
+}
+body.light .sub-icon {
+  background: #d5dbe1a4;
+  color: var(--light-accent-st);
+}
+.subject{
+  color: whitesmoke;
+}
+.sub-score { display: flex; align-items: center; gap: 20px; font-weight: 800; }
+.total-percent { font-size: 1.2rem; color: whitesmoke; }
+body.light .subject, body.light .total-percent { color: black; }
+
+.grade-tag {
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: white;
+}
+.grade-tag.A { background: #10b981; }
+.grade-tag.B { background: #3b82f6; }
+
+/* --- Dropdown Detail Table --- */
+.subject-details {
+  background: rgba(248, 250, 252, 0.5);
+  padding: 25px;
+  border-top: 1px solid #e2e8f0;
+  animation: slideDown 0.3s ease;
+}
+
+.detail-table { display: flex; flex-direction: column; gap: 10px; }
+.detail-header { display: flex; justify-content: space-between; font-weight: bold; color: #64748b; font-size: 0.85rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; }
+.detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; }
+.detail-footer { display: flex; justify-content: space-between; margin-top: 10px; font-weight: 800; color: var(--primary); }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+  .r-header {
+  gap: 20px;
+  }
+}
+@media (max-width: 770px) {
+  .r-full{
+    padding: 40px 20px;
+  }
+  .r-header, .gpa-card, .subject-item {
+    max-width: 500px;
+
+    box-sizing: border-box;
+  }
+  .subjects-archive-list {
+  grid-template-columns: 1fr; 
+}
+  .sub-icon{
+    display: none;
+  }
+  .total-percent{
+    display: none;
+  }
+}

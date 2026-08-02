@@ -1,0 +1,177 @@
+
+:root {
+    /* Dark Theme */
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --dark-border:rgba(255,255,255,0.1);
+  --dark-gold:#d4af37;
+  --dark-text:#ffffff;
+  --dark-text-sub:#94a3b8;
+  --dark-card-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+  /* Light Theme */
+  --light-bg: linear-gradient(135deg,#f8fbff 0%,#eef4ff 100%);
+  --light-accent-soft:#38bdf8;
+  --light-gold:#d97706;
+  --light-text:#0f172a;
+  --light-text-sub:#64748b;
+  --light-card-shadow:0 10px 25px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.03);
+  --light-shine-color:rgba(255,255,255,0.7);
+
+  /* Student Dark*/
+  --bg-glow-st: rgba(0,210,255,0.15);
+  --dark-bg-st:#040917;
+  --dark-glass-st:rgba(6, 10, 20, 0.8);
+  --dark-accent-st:#00d2ff;
+  --dar-navbg-st: rgba(14,165,233,0.08);
+
+  /* Student Light*/
+  --light-glass-st: rgba(155, 207, 233, 0.18);
+  --light-border-st: rgba(80, 138, 149, 0.08);
+  --light-accent-st: #0ea5e9;
+}
+
+.student-content {
+  padding: 40px;
+}
+.glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: whitesmoke;
+}
+body.light .glass-header {
+  color: rgb(40, 40, 40);
+}
+
+.user-welcome h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+.header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-circle {
+  width: 50px;
+  height: 50px;
+  background: var(--light-accent-st);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.stat-engraved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 35px;
+  color: whitesmoke;
+}
+body.light .stat-engraved-grid {
+  color: rgb(38, 38, 38);
+}
+.engraved-card {
+  padding: 30px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 5px 5px 10px rgba(255,255,255,0.5), 
+              5px 5px 20px rgba(0,0,0,0.05);
+}
+.card-gold { border-top: 5px solid var(--light-accent-soft); }
+.card-blue { border-top: 5px solid var(--orange-main); }
+.card-purple { border-top: 5px solid var(--light-accent-t); }
+
+.engraved-card h3 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  font-weight: 800;
+}
+.fill {
+  height: 8px;
+  margin-top: 15px;
+  background: var(--light-accent-soft);
+  border-radius: 10px;
+}
+
+.glass-box {
+  padding: 30px;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+.main-grid-area {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+body.light .action-center{
+    box-shadow: 5px 5px 10px rgba(60, 60, 60, 0.123);
+}
+.action-center h3{
+  color: var(--light-accent-st);
+  margin-bottom: 10px;
+}
+
+.q-link {
+  padding: 18px;
+  background: rgba(255,255,255,0.5);
+  margin-bottom: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+body.light .q-link{ background: rgba(139, 141, 142, 0.164); color: grey; }
+.q-link:hover {
+  background: rgba(245, 245, 245, 0.839);
+  transform: translateX(10px);
+  color: var(--accent);
+}
+body.light .q-link:hover{ background: rgba(171, 214, 235, 0.339); }
+
+.announcement-box{
+  color: rgb(180, 179, 179);
+}
+body.light .announcement-box{
+  color: rgb(75, 74, 74);
+}
+.notice-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.notice-item .date {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--light-accent-soft);
+}
+
+@media (max-width: 710px) {
+  .glass-header {
+  flex-direction: column;
+  align-items: start;
+}
+.header-actions{
+  margin-left: auto;
+}
+.main-grid-area {
+  display: flex;
+  flex-direction: column;
+}
+}
+@media (max-width: 520px) {
+  .student-content{
+    padding: 40px 20px;
+  }
+}

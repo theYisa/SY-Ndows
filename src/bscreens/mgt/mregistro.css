@@ -1,0 +1,196 @@
+.mr-container { 
+  padding: 40px; 
+  animation: fadeIn 0.5s ease;
+}
+.mr-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    color: white;
+}
+.mr-head h1{
+    margin-bottom: 10px;
+    color: #2348b7;
+}
+.btn-primary{
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    border-radius: 10px;
+    color: rgb(199, 198, 198);
+    border: 1px solid grey;
+    background-color: rgba(97, 109, 238, 0.396);
+    z-index: 10;
+}
+.filter-bar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 15px;
+  padding: 15px 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+}
+
+.search-input input {
+    background: transparent; 
+    border: none; 
+    color: white;
+    width: 100%;
+}
+.tabs {
+    display: flex; 
+    gap: 10px; 
+}
+.tabs button {
+  background: transparent; 
+  border: none; 
+  color: #64748b; 
+  padding: 8px 15px; 
+  cursor: pointer; 
+  border-radius: 6px; 
+}
+.tabs button.active { 
+    background: var(--dar-navbg-m); 
+    color: var(--dark-accent-m); 
+    font-weight: 700; 
+}
+.badge { 
+    color: white; 
+    font-size: 0.7rem; 
+    border-radius: 10px; 
+}
+.countActive{
+    background: #dc143c; 
+    margin-left: 5px;
+    padding: 2px 6px; 
+}
+.full-table{
+    border-radius: 10px;
+}
+.wrapper-table{
+    overflow-x: auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    color: whitesmoke;
+}
+th{
+    color: rgb(168, 171, 173);
+}
+th, td{
+    padding: 10px;
+    white-space: wrap;
+}
+.user-info { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+.user-avatar { 
+    width: 40px; 
+    height: 40px; 
+    background: var(--dark-accent-m); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-weight: bold; 
+}
+.user-avatar.teacher { 
+    background: #00bf20; 
+}
+.user-info span { 
+    display: block; 
+    font-size: 0.8rem; 
+    color: #64748b; 
+}
+.type-pill { 
+    padding: 4px 10px; 
+    border-radius: 6px; 
+    font-size: 0.75rem; 
+    font-weight: 700; 
+}
+.type-pill.student { 
+    background: rgba(65, 105, 225, 0.1); 
+    color: #4169e1; 
+}
+.type-pill.teacher { 
+    background: rgba(0, 191, 32, 0.1); 
+    color: #00bf20; 
+}
+
+.status-pill { font-size: 0.75rem; font-weight: 600; }
+.status-pill.pending, .status-pill.probation { color: #ff8c00; background-color: #ff8c001e;}
+.status-pill.active, .status-pill.full-time, .status-pill.part-time { color: #00bf20; }
+
+.actions { 
+    display: flex; 
+    gap: 10px; 
+}
+.action-btn { 
+  width: 32px; 
+  height: 32px; 
+  border-radius: 8px; 
+  border: 1px solid #1e293b; 
+  background: transparent; 
+  color: #64748b; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  transition: 0.2s;
+}
+.action-btn:hover { 
+    border-color: var(--dark-accent-m); 
+    color: var(--dark-accent-m); 
+}
+.action-btn.deactivate:hover { 
+    color: #f68a06; 
+    border-color: #f68a06; 
+}
+.action-btn.delete:hover { 
+    color: #dc143c; 
+    border-color: #dc143c; 
+}
+
+
+body.light .mr-head{ color: black; }
+body.light .search-input { background: #f1f5f9; border-color: #e2e8f0; }
+body.light .search-input input { color: #1e293b; }
+body.light .btn-primary:hover, .btn-primary:hover{ background-color: #5778cc92; }
+body.light .registry-table td { border-bottom: 1px solid #f1f5f9; color: #334155; }
+body.light table{ color: rgb(26, 24, 24); }
+body.light th{ color: rgb(9, 78, 124); }
+body.light .btn-primary{ color: rgb(94, 91, 91); border: 3px solid #d1d9f1; box-shadow: inset 3px 3px 5px rgb(236, 227, 227); background-color: white; box-shadow: inset 3px 3px 5px rgb(236, 227, 227); }
+
+
+@media (max-width: 950px) {
+    .mr-container{
+        padding: 40px 20px;
+    }
+    .mr-head{
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+}
+.tabs { justify-content: space-around; }
+
+}

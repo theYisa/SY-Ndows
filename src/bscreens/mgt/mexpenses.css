@@ -1,0 +1,39 @@
+.payroll-container { padding: 40px; animation: fadeIn 0.5s ease; }
+
+.pay-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+
+.pay-tabs { display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.pay-tabs button {
+  padding: 12px 25px; background: transparent; border: none; color: #64748b;
+  cursor: pointer; position: relative; font-weight: 600;
+}
+.pay-tabs button.active { color: var(--dark-accent-m); }
+.pay-tabs button.active::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--dark-accent-m);
+}
+
+.badge-count { background: #dc143c; color: white; padding: 2px 6px; border-radius: 10px; font-size: 0.7rem; margin-left: 5px; }
+
+/* Table Styling */
+.pay-table { width: 100%; border-collapse: collapse; }
+.pay-table th { text-align: left; padding: 15px; color: #64748b; font-size: 0.85rem; border-bottom: 1px solid #1e293b; }
+.pay-table td { padding: 18px 15px; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.03); }
+
+.editable-cell { cursor: pointer; color: var(--dark-accent-m); }
+.edit-icon { margin-left: 8px; font-size: 0.9rem; opacity: 0.6; }
+
+.status-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; }
+.status-tag.pending { background: rgba(255, 140, 0, 0.1); color: #ff8c00; }
+.status-tag.paid { background: rgba(0, 191, 32, 0.1); color: #00bf20; }
+
+.btn-pay-now { background: #00bf20; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+
+/* Complaints View */
+.complaint-card { background: rgba(255,255,255,0.02); padding: 20px; border-radius: 12px; margin-bottom: 15px; }
+.comp-header { display: flex; justify-content: space-between; margin-bottom: 15px; color: #64748b; font-size: 0.85rem; }
+.staff-meta { display: flex; align-items: center; gap: 10px; color: whitesmoke; }
+.warn-icon { color: #ff8c00; }
+
+.adjustment-box { margin-top: 15px; display: flex; align-items: center; gap: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); }
+.adjustment-box input { background: #0f172a; border: 1px solid #1e293b; color: white; padding: 8px; border-radius: 6px; width: 120px; }
+.btn-apply-fix { background: var(--dark-accent-m); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px; }

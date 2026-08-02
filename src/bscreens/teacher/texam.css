@@ -1,0 +1,86 @@
+.ex-container { padding: 40px; max-width: 1400px; margin: 0 auto; }
+
+.ex-glass-header { 
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; 
+}
+
+/* Setup Config Bar */
+.ex-config-bar {
+  display: flex; gap: 20px; margin-bottom: 40px;
+  background: var(--tp-glass); padding: 15px; border-radius: 20px;
+  border: 1px solid var(--tp-border);
+}
+
+.ex-input-wrap {
+  flex: 1; display: flex; align-items: center; gap: 10px;
+  background: rgba(0,0,0,0.03); padding: 10px 15px; border-radius: 12px;
+}
+
+.ex-input-wrap input, .ex-input-wrap select {
+  background: transparent; border: none; width: 100%; color: var(--tp-text); font-weight: 600;
+}
+
+/* Method Switcher */
+.ex-method-switch { background: var(--tp-border); padding: 5px; border-radius: 15px; display: flex; }
+.ex-method-switch button {
+  border: none; padding: 10px 20px; border-radius: 12px; cursor: pointer;
+  font-weight: 700; background: transparent; display: flex; align-items: center; gap: 8px;
+}
+.ex-method-switch button.active { background: white; color: var(--tp-accent); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+/* Manual Entry Layout */
+.ex-manual-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+
+.ex-q-card {
+  background: var(--tp-glass); border: 1px solid var(--tp-border);
+  padding: 25px; border-radius: 25px; margin-bottom: 25px;
+  box-shadow: var(--tp-card-shadow); transition: 0.3s;
+}
+
+.ex-q-card:hover { transform: translateY(-5px); border-color: var(--tp-accent); }
+
+.ex-q-header { display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: 800; }
+.ex-q-header button { background: transparent; border: none; color: #ef4444; cursor: pointer; }
+
+.ex-q-card textarea {
+  width: 100%; height: 80px; background: rgba(0,0,0,0.02); border: 1px solid var(--tp-border);
+  border-radius: 15px; padding: 15px; font-family: inherit; margin-bottom: 15px;
+}
+
+.ex-img-upload {
+  padding: 15px; border: 2px dashed var(--tp-border); border-radius: 15px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  color: var(--tp-text-sub); cursor: pointer; margin-bottom: 15px;
+}
+
+.ex-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.opt { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.4); padding: 10px; border-radius: 12px; }
+.opt .tag { font-weight: 800; color: var(--tp-accent); }
+.opt input { background: transparent; border: none; width: 100%; font-weight: 600; }
+
+/* Sticky Preview */
+.ex-preview-sidebar {
+  position: sticky; top: 40px; background: var(--tp-glass);
+  padding: 30px; border-radius: 25px; border: 1px solid var(--tp-border);
+  box-shadow: var(--tp-card-shadow); overflow: hidden;
+}
+
+.ex-preview-trigger {
+  width: 100%; padding: 15px; border-radius: 15px; border: 1px solid var(--tp-accent);
+  background: transparent; color: var(--tp-accent); font-weight: 800; cursor: pointer;
+  margin-top: 20px;
+}
+
+.ex-save-trigger {
+  width: 100%; padding: 15px; border-radius: 15px; border: none;
+  background: var(--tp-accent); color: white; font-weight: 800; cursor: pointer;
+  margin-top: 10px; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+}
+
+.ex-add-btn {
+  width: 100%; padding: 20px; background: transparent; border: 2px dashed var(--tp-accent);
+  border-radius: 20px; color: var(--tp-accent); font-weight: 800; cursor: pointer;
+}
+
+.section-divider { border-left: 5px solid var(--tp-accent); padding-left: 15px; margin-bottom: 25px; }

@@ -1,0 +1,37 @@
+.fin-container { padding: 40px; animation: fadeIn 0.5s ease; }
+
+.fin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.current-period { display: flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 10px; }
+
+/* Stats Cards */
+.fin-summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 30px; }
+.stat-card { padding: 25px; display: flex; align-items: center; gap: 20px; border-radius: 16px; }
+
+.stat-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+.stat-icon.rev { background: rgba(65, 105, 225, 0.1); color: var(--dark-accent-m); }
+.stat-icon.pay { background: rgba(0, 191, 32, 0.1); color: #00bf20; }
+.stat-icon.exp { background: rgba(220, 20, 60, 0.1); color: #dc143c; }
+
+.stat-info span { font-size: 0.8rem; color: #64748b; font-weight: 600; }
+.stat-info h2 { font-size: 1.6rem; color: whitesmoke; margin: 5px 0; }
+body.light .stat-info h2 { color: #1e293b; }
+.stat-info small { font-size: 0.75rem; display: flex; align-items: center; gap: 4px; }
+.up { color: #00bf20; }
+.down { color: #dc143c; }
+
+/* Main Grid Layout */
+.fin-main-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 30px; }
+.chart-area, .fin-alerts { padding: 25px; border-radius: 16px; }
+.chart-area h3, .fin-alerts h3 { font-size: 1rem; color: #cbd5e1; margin-bottom: 20px; }
+body.light .chart-area h3 { color: #1e293b; }
+
+/* Alert Section */
+.alert-list { display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px; }
+.alert-item { display: flex; align-items: center; gap: 15px; padding: 15px; border-radius: 10px; background: rgba(255,255,255,0.02); }
+.alert-item.warn { border-left: 4px solid #ff8c00; }
+.alert-item.success { border-left: 4px solid #00bf20; }
+.alert-item p { font-size: 0.8rem; color: #64748b; }
+
+.mini-table { display: flex; flex-direction: column; gap: 10px; }
+.m-row { display: flex; justify-content: space-between; font-size: 0.9rem; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.m-row strong { color: #dc143c; }

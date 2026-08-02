@@ -1,0 +1,125 @@
+.comm-container { padding: 20px; max-width: 1600px; margin: 0 auto; }
+.comm-layout { display: grid; grid-template-columns: 450px 1fr; gap: 25px; align-items: start; }
+
+/* Left Sidebar - Class Teacher */
+.comm-sidebar {
+  background: var(--tp-glass); border: 1px solid var(--tp-border);
+  border-radius: 25px; padding: 25px; box-shadow: var(--tp-card-shadow);
+}
+
+.student-list { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+
+.student-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px; background: rgba(255,255,255,0.3);
+  border-radius: 12px; cursor: pointer; transition: 0.2s;
+}
+
+.student-item.active { background: var(--tp-accent); color: white; }
+.s-status { font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; background: #e2e8f0; color: #475569; }
+.s-status.reviewed { background: #dcfce7; color: #166534; }
+
+/* Peer Insight Wall */
+.peer-insights-wall {
+  margin-top: 30px; border-top: 2px solid var(--tp-border); padding-top: 20px;
+}
+
+.peer-note {
+  background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px;
+  border-left: 4px solid var(--tp-accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.peer-meta { font-size: 0.8rem; margin-bottom: 5px; }
+.peer-note p { font-size: 0.9rem; font-style: italic; color: #334155; }
+
+/* Right Main - Subject Teacher */
+.comm-main {
+  background: white; border-radius: 25px; padding: 30px;
+  border: 1px solid var(--tp-border); min-height: 80vh;
+}
+
+.subject-selector { display: flex; gap: 10px; margin-top: 15px; }
+
+.entry-table { width: 100%; border-collapse: collapse; margin-top: 25px; }
+.entry-table th { text-align: left; padding: 15px; color: var(--tp-text-sub); border-bottom: 1px solid var(--tp-border); }
+.entry-table td { padding: 15px; border-bottom: 1px solid var(--tp-border); }
+
+.entry-table textarea {
+  width: 100%; height: 60px; padding: 10px; border-radius: 8px;
+  border: 1px solid var(--tp-border); background: #f8fafc;
+}
+
+.suggestion-box { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--tp-border); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.chips span {
+  padding: 6px 15px; background: #f1f5f9; border-radius: 20px;
+  font-size: 0.85rem; cursor: pointer; transition: 0.2s;
+}
+.chips span:hover { background: var(--tp-accent); color: white; }
+
+.btn-save-final {
+  width: 100%; margin-top: 15px; padding: 12px; background: #0f172a;
+  color: white; border-radius: 10px; border: none; font-weight: 700;
+}
+
+/* Subject Selection Cards */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.subject-icon-card {
+  background: white;
+  border: 1px solid var(--tp-border);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+
+.subject-icon-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--tp-accent);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.icon-box {
+  width: 40px; height: 40px;
+  background: var(--tp-accent);
+  color: white;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.status-badge {
+  font-size: 0.7rem; padding: 4px 10px; border-radius: 10px; font-weight: bold;
+}
+.status-badge.done { background: #dcfce7; color: #166534; }
+.status-badge.work { background: #fee2e2; color: #991b1b; }
+
+.card-body h3 { margin: 15px 0 5px; font-size: 1.1rem; }
+.card-body p { font-size: 0.85rem; color: var(--tp-text-sub); display: flex; align-items: center; gap: 5px; }
+
+.card-footer {
+  margin-top: 15px; border-top: 1px solid #f1f5f9; padding-top: 10px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.8rem;
+}
+
+.enter-btn {
+  background: transparent; border: none; color: var(--tp-accent);
+  font-weight: bold; display: flex; align-items: center; gap: 4px; cursor: pointer;
+}
+
+.back-link {
+  display: flex; align-items: center; gap: 5px; color: var(--tp-text-sub);
+  background: none; border: none; cursor: pointer; margin-bottom: 20px;
+}
