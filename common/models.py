@@ -11,7 +11,7 @@ to misbehave , we will auto create an account and render all their admin account
 """
 """
 FLOW -> Create Account with email, upon account creation, user receive a temp user id(start with temp-xxxx)
-        Temp user_key(temp-id_number(4 var) where xxxx is their uuid) = Unusable, only email login are they allowed to make as email log in should be allowed on non sensitive place
+        Temp user_key currently set to None by default unless admin = Unusable, only email login are they allowed to make as email log in should be allowed on non sensitive place
         Student user_key(yearClassDeptnumIndex e.g 26prb0001)         = Usable but only given by admin as admin can fetch the datas
         Teacher user_key(Year(te symbolze teacher)Index e.g 26te0001) = Usabel but only admin can pass it to teacher to be used
         Staff(Non Teacher but Not mngt) similar to te but st istead e.g 26st0001
@@ -24,6 +24,10 @@ FLOW -> Create Account with email, upon account creation, user receive a temp us
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.core.validators import EmailValidator
+import time
+
+import random
+
 
 
 
@@ -41,13 +45,13 @@ class UserManager(BaseUserManager):
         if not email:raise ValueError("Email is required")
         EmailValidator()(email)
         email = self.normalize_email(email.lower())
-
         user = self.model(email=email, role=role, **extra_fields)
         user.set_unusable_password()      # no password until admin set password
-        user.save(using=self._db)         #the self._db for multitenant databse e.g i get supabase and sqpite at the same time
+        user.save(using=self._db)         #the self._db for multitenant databse e.g i get supabase and sqpite at the same time; to use i simply do .using('name') in my view
         return user
 
     def create_student(self, email, **extra_fields):
+        extra_fields.setdefault("is_staff", False)
         return self._create_base_auth(email, Role.STUDENT, **extra_fields)
 
     def create_teacher(self, email, **extra_fields):

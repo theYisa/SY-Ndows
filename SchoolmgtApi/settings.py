@@ -27,7 +27,9 @@ INSTALLED_APPS = [
     'students',
     'teacher',
     'management',
-    'salamYusuf'
+    'salamYusuf',
+    
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
