@@ -1,41 +1,69 @@
-TO USE
-    -   git clone repo
-    -   cd name
-    -   python manage.py runserver
+# SchoolmgtApi
 
-    go to http://localhost:8000
+## Setup
 
+```bash
+git clone -b https://github.com/theYisa/SY-Ndows
+cd SY-Ndows
+python manage.py runserver 8000
+```
 
-CURRENT DONE
-    -wired up the backdoor create admin account : domain/sy/_admin/email/password/sy_secret_key/
-        *verification: must start with sy
-        *must have only 4 number after 
-    -wired up the backdoor clear all admin acc  : domain/sy/_admin/sy_secret_key
-    -created the intererstee flow, check students/views/Interestee() for more details
-        * on purpose, i used the Auth user for them cos they are not bonafide student
-        * currently, everybody can access it, no restriction on who can create or post to it
+Then visit `http://localhost:8000`
 
 
+## Status: Current Progress
 
-NB we can wire up permission later in the admin panel as sy
-EXPECTATION UI
-* a page where interested candidate can send data to the api,
-  here no user id is given, infact its like they have no user id, all they have is email and they are registered so in the future we can use tht email to log them in, no passord(or any other alyernatve u think, i said no password cos i set their password to unusbale but its also possible to wire up and endpoint where they can reset their password using email)
-    
-    - type : POST REQUEST to send the data, expect a json : {}
+### ✅ Backdoor admin account creation
+Create an admin account via:
+```
+domain/sy/_admin/<email>/<password>/<sy_secret_key>/
+```
+- Verification: `sy_secret_key`
 
-    - data needed, note all other data will be ignored as i have them set my default in code
+### ✅ Backdoor clear all admin accounts
+```
+domain/sy/_admin/<sy_secret_key>/
+```
 
-        ------------
-        email = unique=True
-        first_name = models.CharField(max_length=100)
-        last_name = models.CharField(max_length=100)
-        ------------
+### ✅ Interestee (prospective student) signup flow
+See `students/views.py` -> `Interestee()` for details.
 
-    
-    
-    
-* 
+- On purpose, the `Auth` user model is used for them, since they aren't bonafide students yet.
+- ⚠️ Currently open to everyone — no restriction yet on who can create or post to it. (will fix before production)
 
+## Expected UI Behavior
 
+### Interestee application (public-facing)
+
+A page where an interested candidate can submit their data to the API. No user ID is issued at this stage — they only provide an email and get registered. That email can later be used to log them in (no password yet; their password is set as unusable on creation). An alternative flow could let them set a password via an email reset link.
+
+**Request**
+```
+POST /students/application/
+Content-Type: application/json
+```
+
+**Body** — all other fields are ignored; defaults are set in code:
+```json
+{
+  "email": "unique, required",
+  "first_name": "string, max 100 chars",
+  "last_name": "string, max 100 chars"
+}
+```
+
+### TODO
+- 
+
+---
+
+## keep this README updated
+
+This file is a **living doc** — I update it every time I write new code, not just at the end. Use this structure so it stays consistent and easy to scan:
+
+1. **Setup** — only touch this if install/run steps change.
+2. **Status: Current Progress** — one `###` subsection per feature.
+   - Prefix the heading with `✅` when it's done, `🚧` when in progress.
+   - Under each: what it does, the route/entry point (file + function/class), and any known caveats or "wire up later" notes.
+3. **Expected UI Behavior** — for each user-facing flow: method + endpoint, request body/shape, and what the client should assume (e.g. no auth yet, defaults applied).
 
