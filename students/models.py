@@ -3,7 +3,7 @@ from django.db import models
 from common.models import BaseUser
 
 class StudentProfile(BaseUser):
-    """Student-only data. One-to-one with User — keeps auth table clean."""
+    """Student-only data. One-to-one with BaseUser, keeps auth table clean."""
     user = models.OneToOneField(BaseUser, on_delete=models.CASCADE, related_name="student_profile")
     date_of_birth = models.DateField()
     place_of_birth = models.CharField(max_length=100)

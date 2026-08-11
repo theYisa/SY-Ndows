@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('django_secret_key')
 
 DEBUG = os.getenv('debug', False)
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOST', "localhost").split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOST', ".localhost").split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,8 +67,25 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    'tenant_1': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'tenant_1.sqlite3',
+    },
+    'tenant_2': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'tenant_2.sqlite3',
+    },
+    'tenant_3': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'tenant_3.sqlite3',
+    },
+    'tenant_4': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'tenant_4.sqlite3',
+    },
 }
+
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -99,3 +116,5 @@ STATIC_URL = 'static/'
 
 
 SECIAL_KEY = os.getenv('sy_secret_key')
+
+DATABASE_ROUTERS = ['SchoolmgtApi.routers.CustomRouter']
